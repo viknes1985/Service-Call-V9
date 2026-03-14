@@ -698,7 +698,7 @@ export default function App() {
                     const activeSponsors = sponsors.filter(s => s.isEnabled);
                     services.forEach((service, index) => {
                       interleaved.push({ type: 'service', data: service });
-                      if ((index + 1) % 3 === 0 && activeSponsors.length > 0) {
+                      if ((index + 1) % 10 === 0 && activeSponsors.length > 0) {
                         const sponsor = activeSponsors[Math.floor(Math.random() * activeSponsors.length)];
                         interleaved.push({ type: 'sponsor', data: sponsor });
                       }
