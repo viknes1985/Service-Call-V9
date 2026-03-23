@@ -1,0 +1,166 @@
+{
+  "name": "JomPro - Find Trusted Local Services",
+  "short_name": "JomPro",
+  "description": "The go-to platform for connecting with professional services in Malaysia. Find, book, and manage your service needs all in one place with JomPro.",
+  "id": "com.jompro.app",
+  "start_url": "/",
+  "display": "standalone",
+  
+"display_override": ["standalone", "minimal-ui"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home-screen.jpg",
+      "sizes": "1206x2037",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Home Screen - Find and register services"
+    },
+
+
+    {
+      "src": "/screenshots/search-screen.jpg",
+      "sizes": "1206x2052",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Search Screen - Find available local services"
+    },
+    {
+      "src": "/screenshots/add-service.jpg",
+      "sizes": "1206x2052",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Add Service - Create new service listing"
+    },
+    {
+      "src": "/screenshots/add-photo.jpg",
+      "sizes": "1206x2052",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Add Photo - Upload photos during registration"
+    },   
+ {
+      "src": "/screenshots/home-screen-wide.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Home Screen - Desktop View"
+    },
+
+    {
+      "src": "/screenshots/sign-up.png",
+      "sizes": "1206x2040",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Sign Up - Create new account"
+    }
+  ]
+}

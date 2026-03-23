@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "mobileNumber": { "type": "string" },
+        "email": { "type": "string" }
+      },
+      "required": ["id", "firstName", "lastName", "mobileNumber", "email"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "A service provider or consumer listing.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "state": { "type": "string" },
+        "town": { "type": "string" },
+        "category": { "type": "string" },
+        "providerName": { "type": "string" },
+        "description": { "type": "string" },
+        "contactNumber": { "type": "string" },
+        "operatingHours": { "type": "string" },
+        "photoUrls": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "number" },
+        "createdBy": { "type": "string" },
+        "creatorName": { "type": "string" },
+        "avgRating": { "type": "number" },
+        "ratingCount": { "type": "number" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "nudgeCount": { "type": "number" },
+        "lastNudgeAt": { "type": "number" },
+        "isSponsored": { "type": "boolean" },
+        "type": { "type": "string", "enum": ["Provider", "Referral", "Admin", "Consumer"] },
+        "isVerified": { "type": "boolean" }
+      },
+      "required": ["id", "state", "town", "category", "providerName", "description", "contactNumber", "operatingHours", "createdAt", "createdBy", "status", "nudgeCount", "lastNudgeAt", "type", "isVerified"]
+    },
+    "Rating": {
+      "title": "Rating",
+      "description": "A rating for a service.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "isHidden": { "type": "boolean" },
+        "createdAt": { "type": "number" },
+        "raterName": { "type": "string" }
+      },
+      "required": ["id", "userId", "rating", "comment", "isHidden", "createdAt"]
+    },
+    "Sponsor": {
+      "title": "Sponsor",
+      "description": "A sponsor advertisement.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "photoUrls": { "type": "array", "items": { "type": "string" } },
+        "isEnabled": { "type": "boolean" },
+        "durationDays": { "type": "number" },
+        "expiresAt": { "type": "number" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "name", "phone", "email", "photoUrls", "isEnabled", "durationDays", "expiresAt", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles."
+    },
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Service listings."
+    },
+    "/services/{serviceId}/ratings/{ratingId}": {
+      "schema": "Rating",
+      "description": "Ratings for a service."
+    },
+    "/sponsors/{sponsorId}": {
+      "schema": "Sponsor",
+      "description": "Sponsor advertisements."
+    }
+  }
+}
