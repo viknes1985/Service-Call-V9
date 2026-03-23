@@ -493,7 +493,7 @@ export default function App() {
     <div className={`min-h-screen pb-20 font-sans transition-colors duration-300 ${isDarkMode ? 'dark bg-black text-white' : 'bg-white text-gray-950'}`}>
       {/* Header */}
       <header className={`${isDarkMode ? 'bg-gray-900' : 'bg-blue-700'} text-white p-4 sticky top-0 z-40 shadow-md flex items-center justify-center relative transition-colors duration-300`}>
-        <div className="absolute left-4 flex items-center gap-2">
+        <div className="absolute left-4 flex items-center">
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
             className={`relative w-14 h-7 rounded-full transition-colors duration-300 flex items-center px-1 ${isDarkMode ? 'bg-slate-700' : 'bg-blue-400'}`}
@@ -530,11 +530,6 @@ export default function App() {
               )}
             </div>
           </button>
-          {user && (
-            <span className="text-[10px] font-bold truncate max-w-[70px] leading-tight">
-              Hi {isAdmin ? 'Admin' : user.firstName}
-            </span>
-          )}
         </div>
         <div className="flex items-center gap-2">
           <img src="/chromeicon.png" alt="Logo" className="w-8 h-8 object-contain" />
@@ -623,6 +618,11 @@ export default function App() {
       </header>
 
       <main className="p-4 max-w-md mx-auto">
+        {user && (
+          <div className="mb-4 animate-in fade-in slide-in-from-left-4 duration-500">
+            <h2 className={`text-lg font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Hi {isAdmin ? 'Admin' : user.firstName}</h2>
+          </div>
+        )}
         <AnimatePresence mode="wait">
           {activeTab === 'home' && (
             <motion.div
